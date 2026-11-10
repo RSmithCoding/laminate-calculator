@@ -27,15 +27,15 @@ print()
 
 no_of_packs = math.ceil(float(area) / float(pack_size))
 
-area_covered = no_of_packs * float(pack_size)
+total_area = no_of_packs * float(pack_size)
 
-price = area_covered * float(cost)
+price = total_area * float(cost)
 
 
 print(f"You will need {no_of_packs} packs of laminate")
 print()
 
-print(f"The area that will be covered is {area_covered} m2")
+print(f"The area that will be covered is {total_area:.2f} m2")
 print()
 print(f"The total cost of your laminate will be £{price:.2f}")
 print()
