@@ -40,11 +40,13 @@ def calculate():
     area = entry3.get()
     pack_size = entry2.get()
         
-    no_of_packs = float(area) / float(pack_size)
+    no_of_packs = math.ceil(float(area) / float(pack_size))
 
-    price = math.ceil(no_of_packs) * float(cost)
+    area_covered = no_of_packs * float(pack_size)
 
-    label4 = Label(frame1,text=f"You will need {math.ceil(no_of_packs)} Packs")
+    price = area_covered * float(cost)
+
+    label4 = Label(frame1,text=f"You will need {no_of_packs} Packs")
     label4.grid(column=0,row=8,sticky='w',pady=2, padx=30)
     label5 = Label(frame1,text=f"The Total Cost is £{price:.2f}")
     label5.grid(column=0,row=9,sticky='w',pady=2, padx=30)
